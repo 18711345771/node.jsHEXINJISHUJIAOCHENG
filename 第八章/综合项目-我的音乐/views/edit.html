@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>编辑音乐</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <h1><a href="/">我的音乐</a><small><%=title%></small></h1>
+    </div>
+    <form action="/edit?id=<%=music.id%>" method="post">
+        <div class="form-group">
+            <lable for="title">标题</lable>
+            <input type="text" id="title" class="form-control" name="title" value="<%=music.title%>">
+        </div>
+        <div class="form-group">
+            <lable for="singer">歌手</lable>
+            <input type="text" id="singer" class="form-control" name="singer" value="<%=music.singer%>">
+        </div>
+        <div class="for-group">
+            <lable for="music_file">音乐</lable>
+            <input type="text" id="music_file" name="music" value="<%=music.music%>">
+            <p class="help-block">请选择要上传的音乐文件</p>
+        </div>
+        <div class="for-group">
+            <lable for="image_file">海报</lable>
+            <input type="text" id="image_file" name="poster" value="<%=music.poster%>">
+            <p class="help-block">请选择要上传的音乐海报文件</p>
+        </div>
+        <button type="submit" class="btn btn-primary" size="small">确定修改</button>
+    </form>
+</div>
+</body>
+</html>
